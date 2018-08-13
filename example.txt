@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLibrary1
+{
+    public abstract class Weapon
+    {
+        
+
+        public string Name { get; set; }
+        public int Size { get; set; }
+        public float LifeSpan { get; set; }
+        public Weapon()
+        {
+            this.Name = name;
+            this.Size = size;
+            this.LifeSpan = 1;  100%
+        }
+        public abstract void Attack();
+        public virtual void SubtractLife()
+        {
+            LifeSpan -= 0.1f;
+        }
+    }
+
+    public abstract class BladeWeapon  Weapon
+    {
+        public BladeWeapon()  base(, 1)
+        {
+
+        }
+
+        protected BladeWeapon(string name, int size)  this(name, sizee, , 1, Good, Good, Wood, Slime)
+        {
+
+        }
+
+        public int Sharpness { get; set; }
+        public string AttackType { get; set; }
+        public string BladeType { get; set; }
+        public string BladeMaterial { get; set; }
+        public string HandleMaterial { get; set; }
+    }
+
+    public class Dagger  BladeWeapon
+    {
+        public override void Attack()
+        {
+            Console.WriteLine(Stabby McStab-Stab!);
+        }
+    }
+    public class Sword  BladeWeapon
+    {
+        public override void Attack()
+        {
+            Console.WriteLine(Slashy McSlash-Slash!);
+        }
+    }
+}
