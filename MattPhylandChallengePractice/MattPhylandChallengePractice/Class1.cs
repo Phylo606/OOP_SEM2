@@ -33,6 +33,10 @@ namespace MattPhylandChallengePractice
         {
             this.ID = id;
         }
+        public void GetInfo()
+        {
+            Console.WriteLine("FName: " + FirstName + ", SName: " + Surname + ", YearOfBirth: " + YearOfBirth + ", ID:" + ID);
+        }
     }
     public abstract class Staff : Person
     {
@@ -49,6 +53,10 @@ namespace MattPhylandChallengePractice
         {
             this.Expertise = expertise;
         }
+        public void GetInfo()
+        {
+            Console.WriteLine("FName: " + FirstName + ", SName: " + Surname + ", YearOfBirth: " + YearOfBirth + ", Expertise:" + Expertise);
+        }
     }
     public class Admin : Staff
     {
@@ -56,6 +64,10 @@ namespace MattPhylandChallengePractice
         public Admin(int officeno, string username, string firstname, string surname, int yearofbirth) : base(username, firstname, surname, yearofbirth)
         {
             this.OfficeNo = officeno;
+        }
+        public void GetInfo()
+        {
+            Console.WriteLine("FName: " + FirstName +", SName: " + Surname + ", YearOfBirth: " + YearOfBirth +", OfficeNumber:" + OfficeNo);
         }
     }
 }
